@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curtainia | Curtain guides</title>
+<meta name="description" content="How to measure a window, choose fullness and a heading, read light control, and care for curtain fabric. Practical guides from the Curtainia atelier.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Marcellus&display=swap">
+<style>
+:root {
+  --bottle: #1b4632;
+  --ink: #10281c;
+  --gold: #a27a38;
+  --gold-soft: #d1b27a;
+  --chalk: #f4f3ed;
+  --mist: #e3e8e0;
+  --muted: #475a4e;
+  --line: rgba(16, 40, 28, .18);
+  --display: "Marcellus", "Times New Roman", serif;
+  --body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--chalk); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; text-wrap: balance; letter-spacing: .005em; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.wrap { width: 100%; max-width: 1180px; margin-inline: auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.band { padding-block: clamp(48px, 7vw, 96px); }
+.band-mist { background: var(--mist); }
+
+.nav { height: 56px; border-bottom: 1px solid var(--line); }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+.brand { font-family: var(--display); font-size: 1.25rem; letter-spacing: .18em; text-decoration: none; color: var(--bottle); }
+.nav-links { display: flex; gap: 28px; font-size: .95rem; }
+.nav-links a { text-decoration: none; color: var(--ink); padding-block: 6px; background: linear-gradient(var(--gold), var(--gold)) left bottom / 0 1px no-repeat; transition: background-size .25s; }
+.nav-links a:hover, .nav-links a[aria-current] { background-size: 100% 1px; }
+@media (max-width: 760px) { .nav-links a:not(.keep) { display: none; } }
+
+.page-head { padding-block: clamp(44px, 6vw, 80px) clamp(32px, 4vw, 56px); }
+.page-head h1 { font-size: clamp(2.1rem, 4.4vw, 3.4rem); line-height: 1.1; color: var(--bottle); max-width: 18ch; }
+.page-head p { color: var(--muted); max-width: 58ch; margin-top: 18px; }
+
+.layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: clamp(32px, 6vw, 80px); align-items: start; }
+.layout > * { min-width: 0; }
+.toc { position: sticky; top: 24px; display: flex; flex-direction: column; gap: 10px; font-size: .94rem; border-left: 1px solid var(--line); padding-left: 20px; }
+.toc span { font-size: .78rem; letter-spacing: .14em; color: var(--muted); }
+.toc a { text-decoration: none; color: var(--ink); }
+.toc a:hover { color: var(--gold); }
+@media (max-width: 880px) { .layout { grid-template-columns: minmax(0, 1fr); } .toc { position: static; } }
+
+article { padding-block: clamp(28px, 4vw, 44px); border-top: 1px solid var(--line); }
+article:first-child { border-top: 0; padding-top: 0; }
+article h2 { font-size: clamp(1.5rem, 2.6vw, 2.1rem); color: var(--bottle); }
+article h3 { font-size: 1.05rem; font-family: var(--body); font-weight: 600; letter-spacing: .01em; margin-top: 26px; }
+article p { max-width: 68ch; margin-top: 12px; color: #26382d; }
+article ul { max-width: 68ch; margin: 14px 0 0; padding-left: 20px; color: #26382d; }
+article li { margin-bottom: 9px; }
+article li::marker { color: var(--gold); }
+.qa { margin-top: 24px; }
+.qa dt { font-weight: 600; max-width: 68ch; }
+.qa dd { margin: 8px 0 20px; max-width: 68ch; color: #26382d; }
+
+.cta-band { background: var(--bottle); color: #eef0e8; }
+.cta-band .wrap { display: flex; flex-wrap: wrap; gap: 20px 48px; align-items: center; justify-content: space-between; }
+.cta-band h2 { font-size: clamp(1.4rem, 2.4vw, 2rem); }
+.btn { display: inline-block; background: var(--gold-soft); color: var(--ink); padding: 14px 26px; text-decoration: none; font-weight: 500; font-size: .98rem; transition: background .2s; }
+.btn:hover { background: #e0c48f; }
+
+footer { background: var(--ink); color: #c9d2c4; padding-block: 44px; font-size: .92rem; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 14px 40px; justify-content: space-between; align-items: baseline; }
+footer .brand { color: var(--gold-soft); }
+footer a { color: #c9d2c4; text-decoration: none; border-bottom: 1px solid rgba(201, 210, 196, .35); }
+footer a:hover { color: var(--gold-soft); }
+.foot-links { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Curtainia home">CURTAINIA</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="index.html#atelier">Atelier</a>
+      <a href="index.html#studio">Drape studio</a>
+      <a href="index.html#collections">Fabrics</a>
+      <a href="guides.html" aria-current="page">Guides</a>
+      <a class="keep" href="index.html#consult">Consultation</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-head band-mist">
+  <div class="wrap">
+    <h1>Everything worth knowing before you commission a pair.</h1>
+    <p>Four short guides from the workshop: how to take a measurement that holds up, how much fabric a window really wants, what lining does to the light, and how to look after the cloth once it hangs.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap layout">
+
+    <nav class="toc" aria-label="On this page">
+      <span>ON THIS PAGE</span>
+      <a href="#measuring">Measuring a window</a>
+      <a href="#fullness">Fullness &amp; headings</a>
+      <a href="#lining">Lining &amp; light control</a>
+      <a href="#care">Fabric care</a>
+      <a href="#questions">Common questions</a>
+    </nav>
+
+    <div>
+
+      <article id="measuring">
+        <h2>Measuring a window</h2>
+        <p>Getting the width and the drop right is the single most important step in a made-to-measure commission. Use a steel tape measure rather than a fabric one, and measure twice.</p>
+
+        <h3>Width</h3>
+        <p>Measure the full length of the track or pole you want covered, end to end. If you want the curtains to sit past the window so they clear the glass when open — which we usually recommend — measure the pole including its extensions beyond the frame, not the window itself.</p>
+
+        <h3>Drop</h3>
+        <p>Measure from the top of the track, or from the rings if you are using a pole with rings, straight down to where the curtain should end. The usual finishing points are the sill, just below the sill, or the floor. For a floor-length pair, stop about 1–2&nbsp;cm above the floor so the hem does not drag.</p>
+
+        <h3>A few things that catch people out</h3>
+        <ul>
+          <li>Measure at the actual mounting height, not at the window opening — track and pole positions vary.</li>
+          <li>If the wall or window is not quite level, measure in two or three places and use the largest number.</li>
+          <li>Send the numbers in centimetres. Width first, then drop.</li>
+          <li>Not sure about a number? Send us the figure you have and a photo of the window; we would rather talk it through than re-cut.</li>
+        </ul>
+      </article>
+
+      <article id="fullness">
+        <h2>Fullness &amp; headings</h2>
+        <p>Two choices decide how a pair actually looks once it hangs: how much fabric goes into the width, and how the top of the curtain attaches to the track. You can try both in the <a href="index.html#studio">drape studio</a>.</p>
+
+        <h3>Fullness</h3>
+        <p>Fullness is the ratio of fabric width to track width. It controls how deep and generous the folds look when the curtains are closed.</p>
+        <ul>
+          <li><strong>1.5× — light.</strong> A flatter, more relaxed drape. Good for lightweight or patterned cloth where you want the print to stay readable.</li>
+          <li><strong>2× — standard.</strong> The most common choice: full folds without excess bulk. Suits most rooms and most fabrics.</li>
+          <li><strong>2.5× — full.</strong> Noticeably richer folds. Our usual recommendation for plain drapery.</li>
+          <li><strong>3× — luxury.</strong> The fullest, most tailored look. Best kept to lighter cloth so the stack at the side of the window does not get too bulky.</li>
+        </ul>
+
+        <h3>Heading styles</h3>
+        <ul>
+          <li><strong>Pencil pleat.</strong> Tightly gathered, rounded pleats along the top. Classic and forgiving.</li>
+          <li><strong>Double or triple pinch pleat.</strong> Pinched pleats of two or three folds for a structured, formal finish.</li>
+          <li><strong>Wave / ripple fold.</strong> Smooth, continuous S-curves. A clean modern line, usually paired with 2× to 2.5× fullness.</li>
+          <li><strong>Eyelet / grommet.</strong> Metal rings threaded straight onto the pole, folding on their own. Often looks right even at lower fullness.</li>
+          <li><strong>Rod pocket.</strong> A simple fabric channel that slides onto the pole. Casual, gathers as you push it along.</li>
+          <li><strong>Tab top.</strong> Fabric loops along the top for a relaxed hang.</li>
+        </ul>
+        <p>If you are unsure which combination suits the room, send a photo and we will tell you what we would do with it.</p>
+      </article>
+
+      <article id="lining">
+        <h2>Lining &amp; light control</h2>
+        <p>Lining is an extra layer of fabric sewn to the back of a panel. It is worth understanding before you settle on a cloth, because it changes the light, the colour and the weight of the finished curtain.</p>
+        <ul>
+          <li><strong>Unlined.</strong> Just the face fabric. Lets in the most light and shows the truest colour and texture of a sheer or semi-sheer weave, with the least privacy after dark.</li>
+          <li><strong>Light-filtering lining.</strong> Softens and diffuses incoming light and adds daytime privacy while still letting the room stay bright.</li>
+          <li><strong>Blackout lining.</strong> Blocks the large majority of light. The right answer for bedrooms, nurseries and media rooms.</li>
+          <li><strong>Thermal or interlining.</strong> A middle layer for insulation against heat, cold and outside noise, on top of whatever light control the lining already gives.</li>
+        </ul>
+        <p>Semi-sheer cloth filters daylight into a soft, even glow and keeps a room from feeling exposed, but it will not darken it. If a particular room needs to go properly dark, say so at the briefing stage and we will put a blackout construction in front of you.</p>
+      </article>
+
+      <article id="care">
+        <h2>Fabric care</h2>
+        <p>General guidance to keep a pair looking right. Always check the care label that comes with your curtains, since recommendations vary by cloth.</p>
+
+        <h3>Linen</h3>
+        <p>Softens beautifully with wear but creases easily. Spot clean where you can; if you wash it, use a gentle cold cycle and reshape it while damp. A cool iron or a steamer on the reverse works well — high heat scorches natural fibres.</p>
+
+        <h3>Cotton</h3>
+        <p>The most forgiving cloth to look after. Machine washable on a gentle cold or warm cycle at most weights; tumble dry low or line dry to avoid shrinkage. Iron on a cotton setting while slightly damp for a crisp finish.</p>
+
+        <h3>Sheers</h3>
+        <p>Handle gently, since sheer weaves snag. A cold hand wash, or a delicate machine cycle in a mesh bag, is safest. Hang to dry; sheers rarely need ironing if you hang them while still damp.</p>
+
+        <h3>Velvet</h3>
+        <p>Do not wash it at home. Steam rather than iron to lift the pile, and vacuum lightly with a brush attachment to lift dust. Send stains to a professional cleaner.</p>
+
+        <h3>In general</h3>
+        <ul>
+          <li>Constant direct sun will fade any fabric in time. Lining slows it down, and so does rotating which panel faces the brightest part of the window.</li>
+          <li>Vacuum or shake curtains out between washes so dust does not settle into the folds.</li>
+          <li>Test a hidden corner before you spot-clean with anything.</li>
+        </ul>
+      </article>
+
+      <article id="questions">
+        <h2>Common questions</h2>
+        <dl class="qa">
+          <dt>How does a commission work?</dt>
+          <dd>You tell us about the room and send the width and drop. We propose a fabric, a heading and a fullness, send swatches to see and touch, then cut and sew the pair to your measurements and ship it to you.</dd>
+
+          <dt>What if I am not sure about my measurements?</dt>
+          <dd>Talk to us before anything is cut. A photo of the window with the figure you have is usually enough for us to tell you whether it looks right.</dd>
+
+          <dt>Do you work with designers and hospitality projects?</dt>
+          <dd>Yes. Trade clients and projects with many windows are a large part of what we do, and we are happy to quote on a schedule of windows.</dd>
+
+          <dt>Where are the curtains made?</dt>
+          <dd>Every commission is cut and sewn in our own workshop in Bursa, Türkiye, and sent from there.</dd>
+
+          <dt>Can I see a fabric before deciding?</dt>
+          <dd>Yes — we send physical swatches during the design stage. On-screen colour is only ever a guide, and we confirm every shade against a swatch before cutting.</dd>
+        </dl>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="band cta-band">
+  <div class="wrap">
+    <h2>Tell us about the window.</h2>
+    <a class="btn" href="index.html#consult">Book a design consultation</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="brand">CURTAINIA</span>
+    <span>Made-to-measure curtains</span>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="guides.html">Guides</a>
+      <a href="legal.html">Privacy &amp; terms</a>
+      <a href="index.html#consult">Contact</a>
+    </nav>
+    <span>info@curtainia.com</span>
+  </div>
+</footer>
+
+</body>
+</html>
