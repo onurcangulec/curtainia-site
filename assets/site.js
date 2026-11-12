@@ -11,7 +11,7 @@
   /* Curtainia'nın kendi GA4 ölçüm kimliği buraya yazılacak (örn. 'G-XXXXXXX').
      BOŞ kaldığı sürece: hiçbir çerez yazılmaz, Google'a hiçbir istek gitmez
      ve çerez şeridi de gösterilmez — onaylanacak bir şey yok. */
-  var GTAG_ID = '';
+  var GTAG_ID = 'G-0H0X7M33XH';
 
   /* ---------- 1. mobil menü ---------- */
   function menu() {

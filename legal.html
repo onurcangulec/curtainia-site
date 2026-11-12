@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com; form-action 'self' https://www.perdenial.com; frame-src 'self' https://www.perdenial.com; base-uri 'self'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; form-action 'self' https://www.perdenial.com; frame-src 'self' https://www.perdenial.com; base-uri 'self'; object-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Privacy, cookies &amp; terms | Curtainia</title>
 <meta name="description" content="What Curtainia collects, what the enquiry form does with it, why there is no cookie banner, and the terms that apply to made-to-measure work.">
@@ -62,8 +62,9 @@
   <h2 id="privacy">Privacy</h2>
 
   <h3>What the website itself collects</h3>
-  <p>Nothing, until you write to us. These pages are static files. They carry no advertising and
-    no third-party tracking scripts.</p>
+  <p>These pages are static files and carry no advertising. The only measurement is Google
+    Analytics, and it does not run until you accept it &mdash; see <a href="#cookies">Cookies</a>
+    below. Beyond that, nothing until you write to us.</p>
 
   <h3>The enquiry form</h3>
   <p>If you fill in the form on the contact page, what you type is sent to a mail script on our
@@ -93,14 +94,20 @@
     <a href="mailto:info@curtainia.com">info@curtainia.com</a> and we will deal with it.</p>
 
   <h2 id="cookies">Cookies</h2>
-  <p><strong>At the time of writing this site sets no cookies at all.</strong> There is no
-    analytics, no advertising pixel and no session store, so no consent banner appears — there
-    would be nothing to consent to.</p>
-  <p>If we add visitor measurement later, the site is already built to ask first: nothing loads
-    and nothing is written until you press <em>Accept</em>, and pressing <em>Decline</em> clears
-    anything a previous choice left behind. Your choice is kept in your browser's own local
-    storage, which is not a cookie and is never sent to us. This paragraph will be updated on
-    the day that changes.</p>
+  <p>This site uses one thing that can set cookies: <strong>Google Analytics 4</strong>, which
+    tells us how many people visit and which pages help. Nothing else — no advertising pixel, no
+    social tracker, no session store.</p>
+  <p><strong>It does not run unless you let it.</strong> The first time you arrive, a strip at the
+    bottom asks. Until you press <em>Accept</em>, no Analytics script loads and not a single
+    request reaches Google. Press <em>Decline</em> and nothing loads, now or later; anything an
+    earlier choice left in your browser is cleared on the spot. We use Google Consent Mode, with
+    every storage permission denied by default.</p>
+  <p>If you accept, Google Analytics sets cookies named <code>_ga</code> and
+    <code>_ga_&lt;id&gt;</code> to tell one visit from another. IP addresses are anonymised. We
+    see totals and trends, never an individual. You can change your mind at any time by clearing
+    this site&rsquo;s data in your browser, which brings the strip back.</p>
+  <p>Your own accept-or-decline choice is kept in your browser&rsquo;s local storage, which is not
+    a cookie and is never sent to us.</p>
 
   <h2 id="terms">Terms of use</h2>
 
