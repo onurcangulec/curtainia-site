@@ -1,15 +1,16 @@
 # Curtainia
 
 > A made-to-measure curtain and roller blind atelier. Curtains are cut for one named
-> window, sewn by hand, and shipped to the United States delivered duty paid — the
-> import duty is inside the quoted price and nothing is collected on delivery.
+> window, sewn by hand, with no minimum order, and exported worldwide: to the United
+> States delivered duty paid (the import duty is inside the quoted price and nothing is
+> collected on delivery), and to the EU, the UK and other countries quoted delivered.
 
 Curtainia Ltd is registered in England and Wales, company number 17203286,
 incorporated May 2026. Contact: info@curtainia.com, WhatsApp +90 532 393 44 16.
 
 ## What is sold
-- Made-to-measure curtains: 99 cloths in stock — 53 drapes, 46 sheers.
-- Cloth widths 290–340 cm; weights 25–375 g/m². Most windows need no seam.
+- Made-to-measure curtains: 99 cloths in the range — 53 drapes, 46 sheers.
+- Cloth widths 290–360 cm; weights 25–375 g/m². Most windows need no seam.
 - Eight headings: double and triple pinch pleat, inverted box pleat, ripple fold,
   grommet, rod pocket, tab top, flat panel. Fullness 1.0× to 2.3×.
 - Made-to-measure roller blinds in blackout and panama cloth.
@@ -37,3 +38,25 @@ a landed price, posts samples, then makes to order.
   country. It is a UK-registered company.
 - The company was incorporated in May 2026; it makes no claim of decades of trading.
 - Fabric weights shown as "on request" are not yet confirmed by the mill.
+
+## Journal — one question per page
+- https://curtainia.com/journal-import-duty-on-curtains-usa.html: Do you pay import duty on curtains shipped to the USA?
+- https://curtainia.com/journal-pinch-pleat-vs-ripple-fold.html: Pinch pleat or ripple fold: which heading should you choose?
+- https://curtainia.com/journal-how-long-should-curtains-be.html: How long should curtains be for 8, 9 and 10 ft ceilings?
+- https://curtainia.com/journal-how-wide-should-curtains-be.html: How wide should curtains be? Fullness, with a worked example
+- https://curtainia.com/journal-sheer-curtains-by-weight.html: Sheer, voile or net: choosing a sheer curtain by its weight
+- https://curtainia.com/journal-blackout-vs-dimout-vs-room-darkening.html: Blackout, dimout and room darkening: what the words actually mean
+- https://curtainia.com/journal-why-extra-wide-fabric-matters.html: Why extra-wide fabric makes a better curtain
+- https://curtainia.com/journal-made-to-measure-vs-ready-made-curtains.html: Made to measure, custom or ready-made: what are you paying for?
+- https://curtainia.com/journal-ordering-custom-curtains-from-abroad.html: Ordering custom curtains from abroad: a checklist
+- https://curtainia.com/journal-curtains-for-hotels-and-short-lets.html: Curtains for hotels, short lets and rental projects: what to specify
+- https://curtainia.com/journal-no-minimum-order-custom-curtains.html: No minimum order: why one window is enough
+- https://curtainia.com/journal-how-to-measure-for-roller-blinds.html: How to measure for a roller blind: inside or outside the recess
+
+## Cloth pages
+Every cloth has its own page with width, weight, composition and the longest seamless drop, e.g. https://curtainia.com/cloth-oak.html. The index is https://curtainia.com/cloth.html.
+
+## Key facts
+- No minimum order: one window is an order, for private and trade customers.
+- Cloth is 290–360 cm wide and is turned on its side, so drops up to 270–340 cm have no seam.
+- Samples are free, including postage, anywhere Curtainia ships.
