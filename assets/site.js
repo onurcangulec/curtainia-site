@@ -108,26 +108,63 @@
     if (read() === 'accepted') loadGA(); else clearGA();
   }
 
-  /* ---------- 4. teklif formu ---------- */
+  /* ---------- 4. teklif formu ----------
+     Sunucu (curtainia-form.php) gercek sonucu postMessage ile bildirir.
+     "ok" gelmeden tesekkur mesaji gosterilmez; cevap gelmezse ya da "hata"
+     gelirse ziyaretciye acikca soylenir ve yazdiklari silinmez. */
+  function track(name, params) {
+    /* Yalniz onay verilmisse GA4'e olay gonder. */
+    if (GTAG_ID && read() === 'accepted') gtag('event', name, params || {});
+  }
+
   function form() {
     var f = document.getElementById('quoteForm');
     if (!f) return;
     var note = document.getElementById('quoteNote');
+    var btn = f.querySelector('button[type="submit"]');
     var ts = f.querySelector('[name="ts"]');
-    if (ts) ts.value = String(Math.floor(Date.now() / 1000));
+    var timer = null, waiting = false;
+    function stamp() { if (ts) ts.value = String(Math.floor(Date.now() / 1000)); }
+    function say(t) { if (note) note.textContent = t; }
+    function done() { waiting = false; clearTimeout(timer); if (btn) btn.disabled = false; }
+    var FAIL = 'Sorry — that did not go through. Nothing you typed has been lost: please try ' +
+               'again in a moment, or write to info@curtainia.com or WhatsApp +90 532 393 44 16.';
+    stamp();
+
+    window.addEventListener('message', function (e) {
+      if (e.origin !== 'https://www.perdenial.com' || !waiting) return;
+      var r = e.data && e.data.curtainiaForm;
+      if (r === 'ok') {
+        done();
+        say('Thank you — your enquiry is with us. We answer within one working day.');
+        track('generate_lead', { form: location.pathname });
+        f.reset(); stamp();
+      } else if (r === 'hata') {
+        done(); say(FAIL); stamp();
+      }
+    });
+
     f.addEventListener('submit', function () {
-      if (note) note.textContent = 'Sending your enquiry…';
-      setTimeout(function () {
-        if (note) note.textContent =
-          'Thank you — your enquiry is with us. We answer within one working day. ' +
-          'If you have not heard back, write to info@curtainia.com and we will chase it.';
-        f.reset();
-        if (ts) ts.value = String(Math.floor(Date.now() / 1000));
-      }, 1400);
+      waiting = true;
+      if (btn) btn.disabled = true;
+      say('Sending your enquiry…');
+      clearTimeout(timer);
+      timer = setTimeout(function () { if (waiting) { done(); say(FAIL); stamp(); } }, 15000);
     });
   }
 
-  function init() { menu(); whatsapp(); banner(); form(); }
+  /* ---------- 5. WhatsApp ve e-posta tiklamalari (GA4) ---------- */
+  function clicks() {
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest ? e.target.closest('a[href]') : null;
+      if (!a) return;
+      var h = a.getAttribute('href');
+      if (/^https:\/\/wa\.me\//.test(h)) track('whatsapp_click', { page: location.pathname });
+      else if (/^mailto:/.test(h)) track('email_click', { page: location.pathname });
+    });
+  }
+
+  function init() { menu(); whatsapp(); banner(); form(); clicks(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
 })();
