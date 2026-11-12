@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://curtainia.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://curtainia.com/guides.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://curtainia.com/legal.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://curtainia.com/</loc><lastmod>2026-11-12</lastmod><priority>1.0</priority></url>
+  <url><loc>https://curtainia.com/cloth.html</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://curtainia.com/shipping.html</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://curtainia.com/rooms.html</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://curtainia.com/blinds.html</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://curtainia.com/bench.html</loc><lastmod>2026-11-12</lastmod><priority>0.7</priority></url>
+  <url><loc>https://curtainia.com/trade.html</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://curtainia.com/contact.html</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://curtainia.com/guides.html</loc><lastmod>2026-11-12</lastmod><priority>0.7</priority></url>
+  <url><loc>https://curtainia.com/legal.html</loc><lastmod>2026-11-12</lastmod><priority>0.3</priority></url>
 </urlset>
