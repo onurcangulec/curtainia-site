@@ -104,7 +104,10 @@ p{margin:0}
 
 figure{margin:0}
 .card figure,.card>img{background:var(--ground-2)}
-.card img{aspect-ratio:3/4;object-fit:cover;width:100%}
+/* height:auto SART. Gorsellerde width/height HTML ozniteligi var (CLS icin gerekli);
+   height ozniteligi aspect-ratio'yu eziyordu ve kutu 306x800 gibi upuzun cikiyor,
+   object-fit:cover da kumasin ortasindan dar bir serit kesip buyutuyordu. (13.11.2026) */
+.card img{aspect-ratio:3/4;object-fit:cover;width:100%;height:auto}
 .card figcaption,.cap{margin-top:12px}
 .cap-t{font-family:var(--display);font-size:19px;display:block}
 .cap-s{font-size:13.5px;color:var(--muted-2);display:block;margin-top:2px}
