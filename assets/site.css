@@ -54,6 +54,13 @@ p{margin:0}
 .ticker{background:var(--ink);color:var(--paper);font-size:11px;font-weight:600;letter-spacing:2.2px;
   text-transform:uppercase;padding-block:11px;text-align:center}
 .ticker span{color:rgba(246,241,230,.55);padding-inline:10px}
+/* Telefonda dort iddia iki satira sariyor, serit 76px tutuyordu. Tek satir +
+   yatay kaydirma: 38px, ilk ekranda 38px yer aciliyor. (13.11.2026) */
+@media (max-width:620px){
+  .ticker{white-space:nowrap;overflow-x:auto;text-align:left;-ms-overflow-style:none;scrollbar-width:none;
+    padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px))}
+  .ticker::-webkit-scrollbar{display:none}
+}
 
 /* ---- başlık ---- */
 .hdr{background:var(--ground);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:40}
@@ -86,7 +93,7 @@ p{margin:0}
   font-size:11px;font-weight:600;letter-spacing:1.9px;text-transform:uppercase;padding:11px 16px}
 @media (max-width:900px){
   .hero{grid-template-columns:1fr}
-  .hero-copy{padding-right:0;padding-top:40px;padding-bottom:28px}
+  .hero-copy{padding-right:0;padding-top:32px;padding-bottom:24px;gap:18px}
   /* 4/3 iken hero telefonda 915px tutuyordu (844'luk ekranin 1.08'i) ve her
      kaydirmada bir sonraki bolumden bir serit gorunuyordu. (13.11.2026) */
   .hero-art{min-height:0;aspect-ratio:16/10}
@@ -214,6 +221,13 @@ table.lib tbody tr:hover{background:rgba(195,184,164,.18)}
 .crz button{font:inherit;font-size:11px;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;
   padding:11px 20px;cursor:pointer;border:1px solid rgba(246,241,230,.3);background:transparent;color:rgba(246,241,230,.8)}
 .crz button.ok{background:var(--bronze-lt);border-color:var(--bronze-lt);color:var(--ink)}
+/* Telefonda serit ~150px tutup hero'daki "Ask for a quote" dugmesini
+   ortuyordu. Daha dar metin ve daha kucuk dolgu ile ~105px. (13.11.2026) */
+@media (max-width:620px){
+  .crz{gap:10px 16px;font-size:13px;line-height:1.45;
+    padding:12px max(16px,env(safe-area-inset-left,0px)) calc(12px + env(safe-area-inset-bottom,0px))}
+  .crz button{padding:9px 16px;letter-spacing:1.4px}
+}
 body.crz-open .wa-float{bottom:124px}
 
 /* ---- yazı sayfaları (rehber, hukuk) ---- */
