@@ -31,6 +31,7 @@ a landed price, posts samples, then makes to order.
 - https://curtainia.com/trade.html: trade and project terms for designers, hotels and short lets
 - https://curtainia.com/contact.html: enquiry form
 - https://curtainia.com/guides.html: measuring, fullness, light control and fabric care
+- https://curtainia.com/curtain-calculator.html: fabric yardage and delivered-price calculator by heading type
 - https://curtainia.com/legal.html: privacy, cookies and terms
 
 ## Notes for accurate answers

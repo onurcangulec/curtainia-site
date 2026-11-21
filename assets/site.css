@@ -191,7 +191,7 @@ table.lib tbody tr:hover{background:rgba(195,184,164,.18)}
 .ftr{background:var(--ink);color:rgba(246,241,230,.62);font-size:14px}
 .ftr-in{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:clamp(24px,4vw,56px);padding-block:clamp(44px,6vw,64px)}
 @media (max-width:860px){.ftr-in{grid-template-columns:1fr 1fr}}
-@media (max-width:540px){.ftr-in{grid-template-columns:1fr}}
+@media (max-width:540px){.ftr-in{grid-template-columns:1fr;padding-bottom:calc(56px + 24px + env(safe-area-inset-bottom,0px))}}
 .ftr h4{font-size:11px;font-weight:600;letter-spacing:2.2px;text-transform:uppercase;color:var(--bronze-lt);margin:0 0 14px}
 .ftr a{color:rgba(246,241,230,.78);text-decoration:none}
 .ftr a:hover{color:var(--paper);text-decoration:underline}
@@ -300,7 +300,8 @@ table.lib a:hover{border-bottom-color:var(--bronze)}
 .c-cta{margin-top:24px}
 @media (max-width:900px){
   .c-grid{grid-template-columns:1fr}
-  .c-fig{position:static;max-width:340px;margin-inline:auto}
+  .c-form{order:-1}
+  .c-fig{position:static;max-width:220px;margin-inline:auto;order:2}
   .c-heads{grid-template-columns:repeat(2,minmax(0,1fr))}
   .c-hd{display:none}
 }
