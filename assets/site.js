@@ -130,6 +130,14 @@
     var FAIL = 'Sorry — that did not go through. Nothing you typed has been lost: please try ' +
                'again in a moment, or write to info@curtainia.com or WhatsApp +90 532 393 44 16.';
     stamp();
+    /* curtain-calculator.html gönderir: ?olcu=…&mesaj=… — yalnız boş alanlara yazılır */
+    try {
+      var q = new URLSearchParams(location.search);
+      [['olcu', 300], ['mesaj', 1200]].forEach(function (p) {
+        var v = q.get(p[0]), el = f.querySelector('[name="' + p[0] + '"]');
+        if (v && el && !el.value) el.value = v.slice(0, p[1]);
+      });
+    } catch (e) {}
 
     window.addEventListener('message', function (e) {
       if (e.origin !== 'https://www.perdenial.com' || !waiting) return;
