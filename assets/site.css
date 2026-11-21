@@ -255,3 +255,6 @@ body.crz-open .wa-float{bottom:124px}
 table.lib a{text-decoration:none;border-bottom:1px solid var(--line)}
 table.lib a:hover{border-bottom-color:var(--bronze)}
 .card a{text-decoration:none}
+
+/* collections + headings */
+.card.wide img{aspect-ratio:4/3}
